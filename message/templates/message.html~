@@ -1,0 +1,60 @@
+<script type=”text/javascript” src=”../static/tiny_mce/tiny_mce.js”></script>
+<script type=”text/javascript” src=”../static/tiny_mce/textareas.js”></script>
+
+
+<h1>评论板</h1>
+<table>
+{% if message_per_page %} 
+<tr> 
+    <td> 
+	{% for message in message_per_page.object_list %}
+        {{ message.title }}{{ message.email }}{{ message.name }}
+  {{ message.time|date:'Y-m-d H:i' }} 留言
+ </td> 
+  </tr> 
+  <tr> 
+ <td>{{ message.content|removetags:"p" }}</td> 
+ {% if message.reply %}
+</tr> 
+<tr> 
+<td>
+主人回复: {{ message.reply|safe }}
+
+ {{ message.reply_date|date:'Y-m-d H:i'}}
+ {% endif %}
+    {% endfor %}
+{% endif %}
+</td>
+</tr>
+</table>
+{% if message_per_page %}
+     <div id="Pager">
+
+	 {% if message_per_page.has_previous %}
+	<a href="?page={{ message_per_page.previous_page_number }}"> 上一页</a>
+	{% endif %}
+
+	<span class="message_per_page">
+	      第{{ message_per_page.number }}页
+	</span>
+
+	{% if message_per_page.has_next %} 
+	<a href="?page={{ message_per_page.next_page_number }}"> 下一页 </a>
+	{% endif %}
+
+     </div>
+	{% endif %}
+      <br />
+
+      <div id="NewMessage">
+	<form action="" method="post"> 
+		<table border = "0" cellpadding="0" >
+
+			{{ form.as_table }}
+		</table>
+		<input type="submit" value="提交"/>
+		 <input type="reset" class="submit_btn float_r" name="reset" id="reset" value=" Reset " />
+		</form>
+      </div>
+
+

@@ -1,0 +1,25 @@
+#coding:utf-8
+from django import template
+from django.template.defaultfilters import stringfilter
+
+register = template.Library()
+
+@register.filter
+@stringfilter
+
+def truncate_zh(value,arg):
+	"""
+	Truncate a string including chinese characters.
+	Argument: Numbers of characters to truncate after.
+	"""
+	try:
+		number = arg
+		if int(number) < len(value):
+			return value[0:int(number)] + '. . . . . .'
+		else:
+			return value
+	except:
+		return value
+
+
+

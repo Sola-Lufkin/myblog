@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+<div class="articleContent"> 
+{% for post in blog_detail %}
+<div class="post hentry article">
+        
+        <div class="headwrap"><h2><a class="entry-title" rel="bookmark" href="{{ blogs.id }}">{{ post.title }}</a></h2></div>
+        <p class="meta">Posted on &#12288;<span class="date">{{ post.time }}</span></p>   
+ 
+<!--  本想用该方法遍历博文图片，但后来证明是不方便也不可取
+{% for pic in blog_image %} 
+<p>图片标题:{{pic.title}}</p>
+<img src="/{{pic.image}}" alt="{{pic.title}}"/>
+{% endfor %}
+-->
+<div class="article">
+<div class="profilepic" style="margin-left: 0px;">
+    <a href="http://solair007.diandian.com/" target="_blank"><img src="../../static/images/templatemo_image_01.jpg" alt="Image 1" class="image_wrapper image_fl" style="-moz-box-shadow:2px 2px 3px #222; float:left; margin: 0 20px 0 0;" /></a>
+</div>
+ 
+<div class="entry-conten" style="line-height：1.5；">
+<p>{{ post.content|safe }}</p>  
+{% endfor %}
+<div class="headwrap"></div>
+</div>
+</div>
+
+<h1>Message Board</h1>
+
+{% if message_per_page %} 
+      {% for message in message_per_page.object_list %}
+<div id="comments">
+
+
+
+				<div class="comments" id="comments-list">
+					
+						    	
+    		<div class="comment-author_vcard"><img width="36" height="36" class="photo_avatar avatar-36 photo avatar-default" src="../../static/images/Yijia.jpg" alt=""> <h5>{{ message.title }}</h5><span class="fn_n">{{ message.name }}</span></div>
+    		<div class="comment-meta">
+			发表于 {{ message.time|date:'Y-m-d H:i' }}					</div>
+                <div class="comment-content">
+        		{{ message.content|removetags:"p" }}
+   		</div>
+
+				</div><!-- #comments-list .comments -->
+			</div>
+			{% endfor %}
+{% endif %}
+
+
+
+
+ <!--
+<table>
+{% if message_per_page %} 
+<tr> 
+    <td> 
+	{% for message in message_per_page.object_list %}
+        {{ message.title }}{{ message.email }}{{ message.name }}
+  {{ message.time|date:'Y-m-d H:i' }} 留言
+ </td> 
+  </tr> 
+  <tr> 
+ <td>{{ message.content|removetags:"p" }}</td> 
+ {% if message.reply %}
+</tr> 
+<tr> 
+<td>
+主人回复: {{ message.reply|safe }}
+
+ {{ message.reply_date|date:'Y-m-d H:i'}}
+ {% endif %}
+    {% endfor %}
+{% endif %}
+</td>
+</tr>
+</table> -->
+<div class="paginated" style="float:right;">
+{% if message_per_page %}
+     <div id="Pager">
+     {% if message_per_page.has_previous or message_per_page.has_next  %}
+     <span class="message_per_page">
+	      <h5>Now is Page {{ message_per_page.number }}</h5>
+	</span>
+     {% endif %}
+	 {% if message_per_page.has_previous %}
+	<a href="?page={{ message_per_page.previous_page_number }}"> Last</a>
+	 {% endif %}
+
+	&#12288  &#12288
+
+	{% if message_per_page.has_next %} 
+	<a href="?page={{ message_per_page.next_page_number }}"> Next </a>
+	{% endif %}
+     </div>
+{% endif %}
+</div>
+      <div class="tailwrap"></div>
+                        
+                        
+                        <div id="contact_form">
+                            <form method="post" name="contact" action="#">
+                            
+                                <input type="hidden" name="post" value="Send" />
+                                
+                                
+                                
+                                <label for="id_title">Title:</label>
+                                <input type="text" id="id_title" name="title" maxlength="30"  class="required input_field" />                      
+                                <div class="cleaner_h10"></div>
+                                
+                                
+                                
+                                
+                                <label for="id_name">Name:</label>
+                                <input type="text" id="id_name" name="name" class="required input_field" />                      
+                                <div class="cleaner_h10"></div>
+                                
+                                
+                                
+                                <label for="id_email">Email:</label>
+                                <input type="text" id="id_email" name="email" class="validate-email required input_field" />             
+                                <div class="cleaner_h10"></div>
+                                
+                                
+                                
+                                <label for="id_content">Message:</label>
+                                <textarea name="content" cols="40" rows="10" id="id_content" class="required"></textarea>             
+                                <div class="cleaner_h10"></div>
+                                
+                                
+                                
+                                <input type="submit" class="submit_btn float_l" name="submit" id="submit" value=" Send " />
+                                <input type="reset" class="submit_btn float_r" name="reset" id="reset" value=" Reset " />
+                            </form>
+                        </div>
+                        
+                        
+       <!-- <br/><br/>                 
+      <div id="contact_form">
+	<form action="" method="post"> 
+		<table border = "0" cellpadding="0" >
+
+			{{ form.as_table }}
+		</table>
+		<br/>
+		<input type="submit" class="submit_btn float_l" name="submit" id="submit" value=" Send " />
+		 <input type="submit" value="提交" style=""/>
+		</form> -->
+		
+    </div>
+    
+    
+</div>
+
+
+{% endblock %}    
+

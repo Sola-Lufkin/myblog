@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<div class="articleContent">
+{% if blog_per_page %}
+  {% for blogs in blog_per_page.object_list %}
+    <div class="post hentry article">
+        
+        <div class="headwrap"><h2><a class="entry-title" rel="bookmark" href="{{ blogs.id }}">{{ blogs.title }}</a></h2></div>
+        <p class="meta">Posted on &#12288;<span class="date">{{ blogs.time }}</span></p>
+        
+    
+        <div class="entry-content">
+            	<p>{{blogs.content|truncatewords:"20"}}</p>
+        </div>
+    
+       <div class="more"><a href="{{ blogs.id }}" class="button">Read more</a></div>
+    <br/>
+    <br/>
+    <br/>     
+    </div>
+  {% endfor %}
+
+<div class="paginated">
+{% if blog_per_page %}
+     <div id="Pager">
+     {% if blog_per_page.has_previous or blog_per_page.has_next  %}
+     <span class="message_per_page">
+	      <h5>Now is Page {{ blog_per_page.number }}</h5>
+	</span>
+     {% endif %}
+	 {% if blog_per_page.has_previous %}
+	<a href="?page={{ blog_per_page.previous_page_number }}"> Last</a>
+	 {% endif %}
+
+	&#12288  &#12288
+
+	{% if blog_per_page.has_next %} 
+	<a href="?page={{ blog_per_page.next_page_number }}"> Next </a>
+	{% endif %}
+     </div>
+{% endif %}
+</div>
+
+      <br />
+{% endif %}
+</div>
+
+
+
+{% endblock %}

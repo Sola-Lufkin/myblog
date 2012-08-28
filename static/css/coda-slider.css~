@@ -1,0 +1,267 @@
+#slider {
+    position: relative;
+	width: 100%;
+}
+
+#templatemo_wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	background: url(../images/templatemo_body.jpg) no-repeat top center;
+}
+
+#templatemo_social {
+	width: 1200px;
+	height: 50px;
+}
+
+#templatemo_main {
+	clear: both;
+	width: 1200px;
+	padding: 0px;
+	height: 580px;
+}
+
+#templatemo_sidebar {
+	float: left;	
+	width: 340px;
+}
+
+#templatemo_content {
+	float: right;
+	width: 810px;
+}
+
+#header h1 { display: block; width: 315px; height: 166px; margin: 0 auto 80px; padding: 0 }
+#header h1 a { float: left; margin-top: 25px; width: 315px; height: 166px; background: url(../images/templatemo_logo.png); text-indent: -10000px; }
+
+#menu {
+	clear: both;
+	float: right;
+}
+
+#templatemo_footer {
+	clear: both;
+	float: right;
+	width: 360px;
+	margin: 20px 40px;
+	padding: 20px;
+	text-align: left;
+	background: #070105;
+	border: 1px solid #26071d;
+}
+#templatemo_footer a {
+	color: #fff;
+}
+
+.scroll {
+    width: 800px;
+    height: 580px;
+    overflow: auto;
+    /* overflow-x: hidden; */
+    position: relative;
+    clear: left;
+
+}
+
+.scrollContainer div.panel {
+    width: 700px;
+    height: 500px;
+	padding: 40px;
+	overflow: hidden;
+}
+
+
+.articleContent {
+    width: 770px;
+    height: 750px;
+	padding: 40px;
+	overflow: auto;
+}
+
+
+
+ul.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.navigation li {
+    margin: 0;
+	padding: 0;
+}
+
+ul.navigation a {
+	display: block;
+	float: right;
+	padding: 8px 15px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-weight: 400;
+    text-decoration: none;
+	color: #fff;
+	text-align: right;
+}
+
+ul.navigation a:hover, ul.navigation a.selected {
+	background: #0f020b
+}
+
+ul.navigation a:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+ul.inside {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.inside li {
+    margin: 0;
+	padding: 0;
+}
+
+ul.inside a {
+	display: block;
+	float: right;
+	padding: 8px 15px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-weight: 400;
+    text-decoration: none;
+	color: #fff;
+	text-align: right;
+}
+
+ul.inside a:hover, ul.inside a.selected {
+	background: #0f020b
+}
+
+ul.inside a:focus {
+    outline: none;
+}
+
+
+
+
+
+/*blog list css */
+.headwrap {
+-moz-box-shadow:0 1px 0 #666666;
+border-bottom:1px solid #000000;
+clear:both;
+height:1.1em;
+margin-bottom:2em;
+}
+.tailwrap{
+clear:both;
+height:1.1em;
+margin-bottom:2em;
+}
+
+.headwrap h2 a{
+    color: #fff;
+}
+
+.headwrap h2 {
+background-color:#000000;
+display:inline-block;
+float:left;
+font-family:"Avenir LT W02 35 Light",helvetica,arial,sans-serif;
+font-size:171.4%;
+font-weight:normal;
+padding:0 10px 0 0;
+}
+
+/* post on time */
+p.meta {
+clear:left;
+color:#FFFFFF;
+font-size:85.7%;
+padding:0 0 2em;
+}
+
+p.meta span {
+color:#AC94B2;
+}
+
+.more {
+padding:1em 0 0;
+text-align:right;
+}
+
+a.button:visited {
+-moz-border-radius-bottomleft:12px;
+-moz-border-radius-bottomright:12px;
+-moz-border-radius-topleft:12px;
+-moz-border-radius-topright:12px;
+background-color:#715F94;
+color:#FFFFFF;
+display:inline-block;
+font-size:85.7%;
+font-weight:bold;
+padding:5px 15px 3px;
+text-decoration:none;
+text-shadow:0 1px 1px #000000;
+text-transform:uppercase;
+}
+
+
+
+
+
+
+
+.scrollButtons {
+    position: absolute;
+    top: 300px;
+    cursor: pointer;
+}
+
+.scrollButtons.left {
+    left: 0
+}
+
+.scrollButtons.right {
+    right: 0
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
+div.comments {
+background-color:#100000;
+border:1px solid #222222;
+list-style-position:outside;
+margin:0;
+padding:10px 20px;
+color:#fefef;
+font-size:12px;
+margin:10px 0;
+}
+/*
+div.comments ol li {
+color:#fefef;
+font-size:12px;
+margin:10px 0;
+}*/
+
+div.comment-author_vcard img {
+float:right;
+}
+
+div.Pager a{
+color:#FFFFFF
+}
