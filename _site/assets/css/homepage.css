@@ -1,0 +1,122 @@
+.blog-list{
+	border-left: 4px solid #7cc576;
+	padding-top: 100px;
+	padding-bottom: 70px;
+}
+
+.blog-footer{
+	min-height: 50px;
+	border-top: 4px solid #7cc576;
+	border-right: 4px solid #7cc576;
+	margin-bottom: 30px;
+	text-align: center;;
+	padding-top: 20px;
+}
+
+.list-title{
+	margin-top: 4px;
+}
+
+.meta:after {
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #333333;
+    border-top: 20px solid transparent;
+    content: "";
+    display: block;
+    position: absolute;
+    /*right: -20px;*/
+    left: 65px;
+    top: 0px;
+}
+
+.meta {
+    background: none repeat scroll 0 0 #333333;
+    height: 40px;
+    border-radius: 4px 0 0 4px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    left: -154px;
+    line-height: 40px;
+    /*position: absolute;*/
+    text-align: center;
+    top: 56px;
+    width: 90px;
+    margin-left: -39px;
+    padding-top: 2px;
+}
+
+.meta >h4{
+	color: #fff;
+}
+
+.blog-content{
+    border-left: 4px solid #7cc576;
+    /*border-bottom: 4px solid #7cc576;*/
+    margin-top: -70px;
+    padding-top: 70px;
+    padding-bottom: 105px;
+    min-height: 520px;
+}
+
+.bio-wrap{
+    background: none repeat scroll 0 0 #33332d;
+    border-radius: 15px;
+    padding: 18px;
+}
+
+.bio-wrap:after{
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #33332d;
+    border-top: 20px solid transparent;
+    content: "";
+    display: block;
+    position: absolute;
+    /*right: -20px;*/
+    left: 225px;
+    top: 48px;
+}
+
+.bio{
+    text-align: right;
+    font-size: 12px;
+    color: #fff;
+    margin-top: -60px;
+}
+
+.border-green{
+    /*border-left: 4px solid #7cc576;*/
+    /*border-right: 4px solid #7cc576;*/
+    /*border-top: 4px solid #7cc576;*/
+    height: 70px;
+    /*z-index: 2;*/
+    /*-webkit-border-radius:15px 15px 0 0;*/
+    /*-moz-border-radius:15px 15px 0 0;*/
+    /*border-radius:15px 15px 0 0;*/
+}
+
+.disqus-content{
+    /*z-index: -1;*/
+
+    padding: 6px;
+    margin-top: -140px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    border: 4px solid #7cc576;
+    /*border: 4px solid #d4d4d4;*/
+    /*border-top: 4px solid #7cc576;*/
+    border-bottom: 4px solid rgb(172, 121, 121);
+    min-height: 100px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+    /*z-index: 2px;*/
+    /*position: relative;*/
+    /*border-left: 4px solid #fff;*/
+
+}
+
+.flow-board{
+    margin-top: 135px;
+}
